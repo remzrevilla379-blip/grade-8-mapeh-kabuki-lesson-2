@@ -1,0 +1,275 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Grade 8 MAPEH — Kabuki Visual & Interactive Lesson</title>
+<style>
+:root{--ink:#343544;--muted:#6d6f7e;--lav:#eeeaff;--lav2:#7567c9;--rose:#fff0f3;--green:#eaf7f1;--gold:#fff7d9;--line:#e4dfeb;--shadow:0 12px 28px rgba(64,55,92,.10)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#faf7ff,#fffdf9 50%,#f5fbf8);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.65}
+#page{max-width:1180px;margin:auto;padding:14px}.hero{padding:35px 28px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(135deg,#eee9ff,#fff0f3 55%,#fff7d9);box-shadow:var(--shadow);margin-bottom:15px}.eyebrow{font-weight:900;letter-spacing:.08em;color:#6255aa}.hero h1{font-size:clamp(38px,6vw,66px);line-height:1;margin:8px 0}.hero p{max-width:900px;color:#626474}
+.nav{position:sticky;top:7px;z-index:20;display:flex;gap:7px;overflow:auto;padding:8px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:18px;margin-bottom:17px}.nav button,.btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 14px;font-weight:800;cursor:pointer;white-space:nowrap}
+.section{background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:24px;padding:24px;margin:17px 0;box-shadow:var(--shadow)}.section h2{margin-top:0;font-size:clamp(25px,4vw,37px)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:15px}.card{border:1px solid var(--line);border-radius:19px;padding:16px;background:#fff;box-shadow:0 5px 17px rgba(50,45,70,.05)}.card h3{margin-top:8px}.tag{display:inline-block;padding:4px 9px;border-radius:999px;background:var(--lav);color:#5b4fa4;font-size:.82rem;font-weight:850;margin:4px 3px}
+.media img{width:100%;height:250px;object-fit:cover;border-radius:16px;background:#eee}.media.tall img{height:340px;object-fit:contain;background:#f6f4fb}.caption{font-size:.82rem;color:var(--muted);margin-top:6px}
+.feature{display:grid;grid-template-columns:1fr 1.05fr;gap:20px;align-items:center}.feature img{width:100%;max-height:450px;object-fit:cover;border-radius:20px}.note{padding:16px;border-radius:18px;background:linear-gradient(135deg,var(--gold),var(--lav));border:1px solid #eadfb6;margin:14px 0}.green{background:var(--green);border-color:#cce6d8}.rose{background:var(--rose);border-color:#efd2d8}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:16px}.compare .card{padding:0;overflow:hidden}.compare .inside{padding:16px}.compare img{width:100%;height:330px;object-fit:cover}
+.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:16px}.video-card{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff}.video-card iframe{width:100%;aspect-ratio:16/9;border:0;display:block}.video-card .inside{padding:14px}.watchlink{display:inline-block;text-decoration:none;color:#5146a3;background:var(--lav);padding:9px 13px;border-radius:12px;font-weight:900}
+.timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}.era{padding:14px;border-radius:17px;background:#faf8ff;border:1px solid var(--line)}.era b{display:block;color:#5c51a8}
+.quiz{border:1px solid var(--line);border-radius:18px;padding:17px;margin:12px 0;background:#fbfaff}.answers{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px}.answer{border:1px solid var(--line);background:#fff;border-radius:13px;padding:10px;text-align:left;font-weight:700;cursor:pointer}.correct{background:#e7f7ed!important;border-color:#9dceb0!important}.wrong{background:#fff0f0!important;border-color:#dfa4a4!important}.feedback{font-weight:800;min-height:25px}.score{text-align:center;background:linear-gradient(135deg,var(--lav),var(--green));padding:18px;border-radius:20px}.bar{height:9px;background:#e8e7ec;border-radius:99px;overflow:hidden}.bar div{height:100%;width:0;background:var(--lav2);transition:.3s}
+.sourcebox{background:#f8f7fc;border:1px solid var(--line);border-radius:16px;padding:14px}.small{font-size:.9rem;color:var(--muted)}.credit{font-size:.78rem;color:var(--muted)}.credit a,.sourcebox a{color:#5b4fa4}
+@media(max-width:720px){.feature,.compare{grid-template-columns:1fr}.section{padding:18px}.hero{padding:27px 19px}.media img{height:210px}.compare img{height:260px}.video-grid{grid-template-columns:1fr}}
+</style>
+</head><body>
+<div id="page">
+<header class="hero" id="home">
+<div class="eyebrow">GRADE 8 • MAPEH • MUSIC & ARTS</div>
+<h1>🎭 KABUKI</h1><h2>Japanese Traditional Theatre — See It, Watch It, Understand It</h2>
+<p>This visual lesson uses photographs, historical images, a stage GIF, and video examples so learners can <b>see the terms instead of only reading about them.</b></p>
+<button class="btn" onclick="go('actors')">🎭 Meet the Actors</button>
+<button class="btn" onclick="go('makeup')">🎨 See Makeup</button>
+<button class="btn" onclick="go('stage')">🏮 Explore the Stage</button>
+<button class="btn" onclick="go('watch')">▶ Watch</button>
+</header>
+
+<nav class="nav">
+<button onclick="go('actors')">Actors</button><button onclick="go('styles')">Aragoto • Wagoto • Mie</button>
+<button onclick="go('makeup')">Makeup</button><button onclick="go('costume')">Costume & Wigs</button>
+<button onclick="go('stage')">Stage</button><button onclick="go('props')">Props</button>
+<button onclick="go('watch')">Videos</button><button onclick="go('quiz')">Quiz</button>
+</nav>
+
+<section class="section" id="intro">
+<h2>📖 What is Kabuki?</h2>
+<div class="feature"><div class="media"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kabuki%20Performer.jpg" alt="Kabuki performer" loading="lazy" onerror="this.closest('.media').style.display='none'"></div>
+<div><span class="tag">Japan</span><span class="tag">Theatre</span><span class="tag">Dance</span><span class="tag">Music</span>
+<p>Kabuki is a traditional Japanese theatre form that combines music and dance with highly stylized acting, elaborate costumes, makeup, and stage techniques. The Japan Arts Council explains that Kabuki developed into an all-male theatrical tradition; actors playing female roles are known as <i>onnagata</i>, while male roles include <i>tachiyaku</i>.</p>
+<div class="note"><b>🎯 Student goal:</b> Identify what the <b>actor</b>, <b>face</b>, <b>costume</b>, <b>stage</b>, <b>props</b>, and <b>music</b> are communicating.</div>
+</div></div></section>
+
+<section class="section" id="actors"><h2>🎭 1. Kabuki Male Performers</h2><div class="grid">
+<div class="card"><div class="media"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kabuki%20Performer.jpg" alt="Kabuki performer" loading="lazy" onerror="this.closest('.media').style.display='none'"></div><h3>👨‍🎭 Male performer</h3><p>Kabuki developed as a theatre in which men perform all roles. The actor's body, voice, movement, costume, makeup, and hairstyle work together to communicate character.</p></div>
+<div class="card"><div class="media"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kabuki%20actors%20dressed%20as%20samurai%20in%201880.jpg" alt="Historical Kabuki actors in costume" loading="lazy" onerror="this.closest('.media').style.display='none'"></div><h3>👘 Actor as visual storyteller</h3><p>Even before the actor speaks, the audience can receive information from the silhouette, costume, makeup, hairstyle, posture, and position on stage.</p></div>
+</div><div class="sourcebox"><b>Official reference:</b> <a href="https://www2.ntj.jac.go.jp/dglib/contents/learn/edc25/en/" target="_blank">Japan Arts Council — Kabuki for Beginners ↗</a></div></section>
+
+<section class="section" id="styles"><h2>💥 2. Aragoto • 🌸 Wagoto • ⭐ Mie</h2>
+<div class="compare">
+<div class="card"><div class="media tall"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kabuki-makeup.PNG" alt="Kabuki aragoto and kumadori example" loading="lazy" onerror="this.closest('.media').style.display='none'"></div><div class="inside"><span class="tag">ARAGOTO</span><h3>💥 Exaggerated / bold style</h3><p>Aragoto is a rough, wild, powerful acting style. It is associated with exaggerated costumes, kumadori makeup, mie, and stylized movements.</p><a class="watchlink" href="https://www2.ntj.jac.go.jp/dglib/contents/learn/edc25/en/performance-poses/aragoto.html" target="_blank">Official Aragoto examples ↗</a></div></div>
+<div class="card"><div class="media tall"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20the%20Kabuki%20Actor%2C%20Seigawa%20Kikunojo%2C%20in%20the%20Role%20of%20a%20Courtesan%20-%20Vanderbilt%20Fine%20Arts%20Gallery%20-%201992.405.jpg" alt="Kabuki wagoto-related actor print" loading="lazy" onerror="this.closest('.media').style.display='none'"></div><div class="inside"><span class="tag">WAGOTO</span><h3>🌸 Soft / elegant style</h3><p>Wagoto is a softer style often used for romantic male leads, with an elegant and gentle bearing.</p><a class="watchlink" href="https://www2.ntj.jac.go.jp/unesco/kabuki/en/character-actor/role2.html" target="_blank">Official Wagoto example ↗</a></div></div>
+</div>
+<div class="card" style="margin-top:16px"><div class="media"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kabuki%20Performer.jpg" alt="Kabuki performer" loading="lazy" onerror="this.closest('.media').style.display='none'"></div><h3>⭐ Mie — the dramatic freeze</h3><p>During an important emotional moment, the actor pauses in a powerful pose. Other stage movement can stop at the same time, directing attention to the character. The effect is often emphasized by <i>tsuke</i> clapper sounds.</p><a class="watchlink" href="https://www2.ntj.jac.go.jp/dglib/contents/learn/edc25/en/performance-poses/mie.html" target="_blank">See official Mie examples ↗</a></div>
+</section>
+
+<section class="section" id="makeup"><h2>🎨 3. Makeup — Keshō & Kumadori</h2><div class="grid">
+<div class="card"><div class="media tall"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kabuki-makeup.PNG" alt="Kabuki makeup example" loading="lazy" onerror="this.closest('.media').style.display='none'"></div><h3>🤍 Keshō — basic stage makeup</h3><p><i>Keshō</i> refers broadly to Kabuki makeup. A light or white base helps create the strong visual effect needed for stage performance.</p></div>
+<div class="card"><div class="media tall"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kabuki-makeup.PNG" alt="Kabuki aragoto and kumadori example" loading="lazy" onerror="this.closest('.media').style.display='none'"></div><h3>🔴 Kumadori — expressive lines</h3><p>Kumadori is distinctive Kabuki makeup, especially associated with dramatic characters. The Japan Arts Council explains that colors and patterns relate to role characteristics; red is associated with courage, justice, and strength in Aragoto.</p></div>
+</div><div class="note">👀 <b>Look closely:</b> Which parts of the face are emphasized? What changes when the actor makes a strong expression?</div>
+<a class="watchlink" href="https://www2.ntj.jac.go.jp/dglib/contents/learn/edc25/en/kumadori/" target="_blank">Explore the official Kumadori gallery ↗</a></section>
+
+<section class="section" id="costume"><h2>👘 4. Costumes & Wigs</h2><div class="grid">
+<div class="card"><div class="media tall"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kabuki%20costume%2C%20Edo%20period%2C%201860%2C%20silk%2C%20gilt%20thread%2C%20plain%20crepe%20weave%2C%20satin%20weave%20and%20embroidery%20%28couching%29%2C%20HMA.JPG" alt="Kabuki costume example" loading="lazy" onerror="this.closest('.media').style.display='none'"></div><h3>👘 Kabuki costume</h3><p>Costumes are deliberately designed for stage visibility and character presentation. Pattern, color, shape, and scale can contribute to the role's visual identity.</p></div>
+<div class="card"><div class="media"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kabuki%20Performer.jpg" alt="Kabuki performer" loading="lazy" onerror="this.closest('.media').style.display='none'"></div><h3>💇 Wig + costume together</h3><p>Kabuki wigs are highly stylized. The Japan Arts Council identifies <i>bin</i>, <i>tabo</i>, <i>mage</i>, and <i>maegami</i> as four main wig elements. Different combinations help communicate character and personality.</p></div>
+</div><div class="sourcebox"><a href="https://www2.ntj.jac.go.jp/unesco/kabuki/en/character-actor/character1.html" target="_blank">National Theatre — Characters, Costumes & Wigs ↗</a></div></section>
+
+<section class="section" id="stage"><h2>🏮 5. The Kabuki Stage — See the Parts</h2>
+<div class="card"><div class="media tall"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kabuki-theater.gif" alt="Animated Kabuki theatre diagram" loading="lazy" onerror="this.closest('.media').style.display='none'"></div><h3>🔄 Animated stage diagram</h3><p><b>This is a real GIF.</b> It gives students a moving visual of a Kabuki theatre layout.</p><div class="credit"><a href="https://commons.wikimedia.org/wiki/File:Kabuki-theater.gif" target="_blank">View GIF source and license ↗</a></div></div>
+<div class="grid" style="margin-top:16px">
+<div class="card"><div class="media"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/National%20Theatre%20of%20Japan%20-%20Hanamichi%202018%2010%2021.JPG" alt="Kabuki hanamichi walkway through audience" loading="lazy" onerror="this.closest('.media').style.display='none'"></div><h3>🌉 Hanamichi</h3><p>A walkway runs from the main stage through the audience area. Actors can enter, exit, or perform important moments there.</p></div>
+<div class="card"><div class="media"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/THE%20REVOLVING-STAGE.%20%281910%29%20-%20illustration%20-%20page%20275.png" alt="Historical illustration of a Kabuki revolving stage" loading="lazy" onerror="this.closest('.media').style.display='none'"></div><h3>🔄 Revolving stage</h3><p>A circular portion of the stage can rotate to change the visible scene.</p></div>
+<div class="card"><div class="media"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Closeup%20of%20trapdoor%20%28suppon%29%20at%20Konpira%20Grand%20Theatre.jpg" alt="Suppon trapdoor at a traditional Kabuki theatre" loading="lazy" onerror="this.closest('.media').style.display='none'"></div><h3>⬆️ Trapdoor / Suppon</h3><p>The <i>suppon</i> is a small lift/trapdoor associated with the hanamichi area and can support dramatic appearances and disappearances.</p></div>
+<div class="card"><div class="media"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Hinoemata%20Kabuki%20Stage%2001.jpg" alt="Kabuki stage and audience arrangement" loading="lazy" onerror="this.closest('.media').style.display='none'"></div><h3>🏮 Theatre space</h3><p>Stage, audience, passageways, and performance areas are planned so entrances and exits become part of the visual drama.</p></div>
+</div></section>
+
+<section class="section" id="props"><h2>🪭 6. Props — Objects That Help Tell the Story</h2><div class="grid">
+<div class="card"><div class="media"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/MET%20DP138916.jpg" alt="Kabuki actor holding a fan" loading="lazy" onerror="this.closest('.media').style.display='none'"></div><h3>🪭 Fan and hand props</h3><p>Simple objects can become expressive tools in Kabuki. A fan can support gesture, dance, character presentation, or storytelling.</p></div>
+<div class="card"><div class="media"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kabuki%20actors%20dressed%20as%20samurai%20in%201880.jpg" alt="Historical Kabuki actors in costume" loading="lazy" onerror="this.closest('.media').style.display='none'"></div><h3>🎭 Stage objects</h3><p>The National Theatre divides Kabuki props broadly into <i>honmono</i> (everyday items) and <i>koshiraemono</i> (items specially crafted for effective use and display on stage).</p></div>
+</div><div class="note green"><b>Student question:</b> If the audience sees the object before the actor explains it, what might it tell us about the character or situation?</div>
+<a class="watchlink" href="https://www2.ntj.jac.go.jp/unesco/kabuki/en/character-actor/character1.html" target="_blank">View the official stage-props section ↗</a></section>
+
+<section class="section" id="watch"><h2>🎬 7. Watch It Move</h2><div class="video-grid">
+<div class="video-card"><iframe src="https://www.youtube.com/embed/67-bgSFJiKc" title="Kabuki Theatre introduction" allowfullscreen loading="lazy"></iframe><div class="inside"><h3>▶ Kabuki Theatre Introduction</h3><p>Use this for a broad first look at acting, costumes, makeup, and staging.</p><a class="watchlink" href="https://www.youtube.com/watch?v=67-bgSFJiKc" target="_blank">Open video ↗</a></div></div>
+<div class="video-card"><iframe src="https://www.youtube.com/embed/1KxDVAUghWY" title="Kabuki dance performance" allowfullscreen loading="lazy"></iframe><div class="inside"><h3>▶ Kabuki Dance Performance</h3><p>Ask learners to observe movement, costume, music, and stage presentation.</p><a class="watchlink" href="https://www.youtube.com/watch?v=1KxDVAUghWY" target="_blank">Open video ↗</a></div></div>
+</div><div class="note rose"><b>🎯 Stop-and-spot:</b> Pause the video and ask: Is this an acting style, makeup feature, costume feature, stage feature, or music feature?</div></section>
+
+<section class="section"><h2>✏️ 8. Kabuki Visual Detective</h2><div class="grid">
+<div class="card"><h3>🎭 Actor</h3><p>Write one detail about movement or expression.</p><p>____________________________</p></div>
+<div class="card"><h3>🎨 Face</h3><p>Identify one makeup feature.</p><p>____________________________</p></div>
+<div class="card"><h3>👘 Costume</h3><p>Describe one costume or wig feature.</p><p>____________________________</p></div>
+<div class="card"><h3>🏮 Stage</h3><p>Name one stage feature you saw.</p><p>____________________________</p></div>
+</div></section>
+
+<section class="section" id="quiz"><h2>🏆 9. Visual Kabuki Quick Check</h2>
+<div class="score"><b>Your Score</b><div id="score">0 / 8</div><div class="bar"><div id="bar"></div></div></div>
+<div id="quizArea"></div>
+<button class="btn" onclick="resetQuiz()">🔄 Retake</button>
+
+<div class="note green" style="margin-top:18px">
+  <h3>📤 Submit Your Quiz Score</h3>
+  <p>Answer all 8 questions first. Your score will be recorded automatically when you submit it.</p>
+
+  <label for="studentName"><b>Student Name</b></label>
+  <input id="studentName" type="text" placeholder="Enter your full name"
+         style="width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;margin:6px 0 12px">
+
+  <label for="sectionSelect"><b>Section</b></label>
+  <select id="sectionSelect"
+          style="width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;margin:6px 0 12px">
+    <option value="">Select your section</option>
+    <option value="Prudence">Prudence</option>
+    <option value="Perse">Perse</option>
+    <option value="Purity">Purity</option>
+    <option value="Peace">Peace</option>
+  </select>
+
+  <label for="quizDate"><b>Quiz Date</b></label>
+  <select id="quizDate"
+          style="width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;margin:6px 0 12px">
+    <option value="">Select date</option>
+    <option value="September 22, 2026">September 22, 2026</option>
+    <option value="September 23, 2026">September 23, 2026</option>
+  </select>
+
+  <button class="btn" id="submitScoreBtn" type="button" onclick="submitScore()">📤 Submit Score</button>
+  <p id="submissionMessage" class="small" aria-live="polite"></p>
+</div>
+</section>
+
+<section class="section"><h2>📚 Teacher Notes & Sources</h2>
+<p>This visual version keeps the lesson aligned with your Grade 8 MAPEH materials. Your uploaded lesson materials emphasize image-based review and visual examples to help learners distinguish Asian performing arts and connect artistic design to meaning. fileciteturn0file3L167-L203</p>
+<div class="sourcebox">
+<p><b>Primary reference:</b> Japan Arts Council / National Theatre — <i>Kabuki for Beginners</i> and <i>Invitation to Kabuki</i>.</p>
+<p><a href="https://www2.ntj.jac.go.jp/dglib/contents/learn/edc25/en/" target="_blank">Kabuki for Beginners ↗</a></p>
+<p><a href="https://www2.ntj.jac.go.jp/unesco/kabuki/en/introduction/index.html" target="_blank">Invitation to Kabuki ↗</a></p>
+<p><b>Image sources:</b> Wikimedia Commons files are linked directly in the lesson and provide source/license pages.</p>
+</div></section>
+<p class="small" style="text-align:center">Grade 8 MAPEH • Music & Arts • Kabuki Visual & Interactive Lesson</p>
+</div>
+
+<script>
+const Q=[
+["Which acting style is known for exaggerated, powerful presentation?","Aragoto",["Aragoto","Wagoto","Nagauta","Hanamichi"]],
+["What is mie?","A dramatic held pose",["A costume","A dramatic held pose","A wig part","A stage curtain"]],
+["What is the hanamichi?","A walkway through the audience",["A makeup line","A walkway through the audience","A type of wig","A music ensemble"]],
+["Which is associated with expressive Kabuki makeup?","Kumadori",["Kumadori","Hanamichi","Nagauta","Wagoto"]],
+["Which style is generally softer and more elegant?","Wagoto",["Aragoto","Hanamichi","Mie","Wagoto"]],
+["What can a revolving stage do?","Change the visible scene",["Change the visible scene","Apply makeup","Play music","Make costumes"]],
+["What are Kabuki wigs used for?","Helping communicate character and personality",["Helping communicate character and personality","Replacing the stage","Playing instruments","Changing the audience"]],
+["Why are props important?","They can help communicate character and action",["They can help communicate character and action","They are always decoration","They replace actors","They are only for the audience"]]
+];
+
+let score=0, done=Array(Q.length).fill(false);
+let submitted=false;
+
+/* Paste your deployed Google Apps Script Web App URL below. */
+const SCORE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby3ndQ3m7fMBvwk9Fc3ABQLmtabdMOKW4ojJasdACE6w6c2P-GNv-eLdEzkW4TLIx_8PQ/exec";
+
+function go(id){
+  document.getElementById(id)?.scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+function render(){
+  const a=document.getElementById("quizArea");
+  a.innerHTML="";
+  Q.forEach((q,i)=>{
+    const box=document.createElement("div");
+    box.className="quiz";
+    box.innerHTML="<h3>"+(i+1)+". "+q[0]+"</h3><div class='answers'></div><div class='feedback' id='f"+i+"'></div>";
+    q[2].forEach(x=>{
+      const b=document.createElement("button");
+      b.className="answer";
+      b.type="button";
+      b.textContent=x;
+      b.onclick=()=>ans(i,x,b);
+      box.querySelector(".answers").appendChild(b);
+    });
+    a.appendChild(box);
+  });
+}
+
+function ans(i,x,b){
+  if(done[i] || submitted) return;
+  done[i]=true;
+  const ok=x===Q[i][1];
+  if(ok) score++;
+  b.classList.add(ok?"correct":"wrong");
+  document.getElementById("f"+i).textContent=
+    ok?"✅ Correct!":"❌ Correct answer: "+Q[i][1];
+  document.getElementById("score").textContent=score+" / "+Q.length;
+  document.getElementById("bar").style.width=(score/Q.length*100)+"%";
+}
+
+function resetQuiz(){
+  if(submitted) return;
+  score=0;
+  done=Array(Q.length).fill(false);
+  document.getElementById("score").textContent="0 / "+Q.length;
+  document.getElementById("bar").style.width="0%";
+  document.getElementById("submissionMessage").textContent="";
+  render();
+}
+
+function submitScore(){
+  const name=document.getElementById("studentName").value.trim();
+  const section=document.getElementById("sectionSelect").value;
+  const date=document.getElementById("quizDate").value;
+  const message=document.getElementById("submissionMessage");
+  const button=document.getElementById("submitScoreBtn");
+
+  if(SCORE_SCRIPT_URL==="PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE"){
+    message.textContent="Teacher setup is not complete yet. Please ask your teacher to add the score submission link.";
+    return;
+  }
+
+  if(done.filter(Boolean).length!==Q.length){
+    message.textContent="Please answer all 8 questions before submitting your score.";
+    return;
+  }
+
+  if(!name || !section || !date){
+    message.textContent="Please enter your name, select your section, and select the quiz date.";
+    return;
+  }
+
+  button.disabled=true;
+  message.textContent="Submitting your score...";
+
+  // Google Apps Script web apps can redirect their response, which can
+  // cause browser fetch/CORS errors. A hidden HTML form avoids that issue.
+  let iframe=document.getElementById("scoreSubmitFrame");
+  if(!iframe){
+    iframe=document.createElement("iframe");
+    iframe.id="scoreSubmitFrame";
+    iframe.name="scoreSubmitFrame";
+    iframe.style.display="none";
+    document.body.appendChild(iframe);
+  }
+
+  const form=document.createElement("form");
+  form.method="POST";
+  form.action=SCORE_SCRIPT_URL;
+  form.target="scoreSubmitFrame";
+  form.style.display="none";
+
+  const fields={
+    name:name,
+    section:section,
+    date:date,
+    score:String(score),
+    total:String(Q.length),
+    lesson:"Kabuki Visual & Interactive Lesson"
+  };
+
+  Object.keys(fields).forEach(key=>{
+    const input=document.createElement("input");
+    input.type="hidden";
+    input.name=key;
+    input.value=fields[key];
+    form.appendChild(input);
+  });
+
+  document.body.appendChild(form);
+  form.submit();
+  form.remove();
+
+  submitted=true;
+  message.textContent="✅ Your score has been submitted: "+score+" / "+Q.length;
+  button.textContent="✅ Score Submitted";
+}
+
+render();
+</script>
+</body></html>
